@@ -1,7 +1,16 @@
+# todos:
+#   1. Make CLI version of tool: `python sharpen.py --radius 3 --amount 4 -o myimage.png`
+#   2. Make Python API version of tool with OOP interface: `app.load_image('myimage.png'); app.sharpen(3, 4); app.save('newimage.png.')`
+#   3. Let user choose a different backend (like scipy.ndimage) for doing the sharpening: https://scipy-lectures.org/advanced/image_processing/
+#   4. Make Python wrapper functions for image processing and image loading (for other projects): `skimage_processing.sharpen(array, 3, 4)`
+#   5. Release each tool seperately, with their own installation pathway (pip install imsharp, pip install imsharp-streamlit, pyinstaller imsharp-cli).
+
+
 import streamlit as st
 import numpy as np
 import cv2
 from skimage.filters import unsharp_mask
+from skimage.io import imsave  # For saving an image file
 
 st.title("Image Sharpener Tool")
 st.sidebar.title("Settings")
@@ -29,5 +38,6 @@ with tab3:
     if image_io is not None:
         sharpened = unsharp_mask(image, radius=sharpen_radius, amount=sharpen_amount)
         st.image(sharpened)
+
 
 

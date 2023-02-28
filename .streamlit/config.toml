@@ -1,0 +1,4 @@
+# https://docs.streamlit.io/library/advanced-features/theming
+[theme]
+base="dark"
+primaryColor="lightblue"
