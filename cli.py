@@ -1,11 +1,12 @@
 from argparse import ArgumentParser
+from app import App
 
 
-parser = ArgumentParser(description="An adder program")
-parser.add_argument("x", type=int, help="The first number to add")
-parser.add_argument("y", type=int, help="The second number to add.")
+parser = ArgumentParser(description="An Image Sharpener Program")
+parser.add_argument("image")
 
 args = parser.parse_args()
 
-z = args.x + args.y
-print(f"{args.x} + {args.y} = {z}")
+app = App()
+app.load_image_from_path(args.image)
+app.save_sharpened_image("sharpened.png")
