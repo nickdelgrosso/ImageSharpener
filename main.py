@@ -10,6 +10,9 @@
 #   2. Separate UI layout from state management from processing steps
 #   3. Separate pure functions from stateful modules.
 
+# utils.py  
+# app.py
+# gui.py 
 
 import streamlit as st
 import numpy as np
