@@ -4,7 +4,12 @@
 #   3. Let user choose a different backend (like scipy.ndimage) for doing the sharpening: https://scipy-lectures.org/advanced/image_processing/
 #   4. Make Python wrapper functions for image processing and image loading (for other projects): `skimage_processing.sharpen(array, 3, 4)`
 #   5. Release each tool seperately, with their own installation pathway (pip install imsharp, pip install imsharp-streamlit, pyinstaller imsharp-cli).
-#   6. Separate dependencies into their own modules, where possible.
+
+# improvements:
+#   1. Separate dependencies into their own modules, where possible.
+#   2. Separate UI layout from state management from processing steps
+#   3. Separate pure functions from stateful modules.
+
 
 import streamlit as st
 import numpy as np
